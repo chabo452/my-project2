@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 
-// あなたの提供画像を仮に以下のようにインポート
-import popupImg from "./assets/popup_main.png";
+// 画像を assets フォルダからインポート
+import popupImg from "./assets/popup_main.jpg"; // ← 拡張子を .jpg に変更
 import distImg from "./assets/distribution.png";
 import mdImg from "./assets/merchandising.png";
 import brandImg from "./assets/brand_showcase.png";
