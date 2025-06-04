@@ -1,0 +1,181 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* コンテナ */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ヘッダー */
+.header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.header h1 {
+  margin-bottom: 0.2em;
+  font-size: 2.4rem;
+  color: #1b3a57;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* セクション共通 */
+.section {
+  margin: 40px 0;
+}
+
+.section h2 {
+  border-left: 6px solid #1b3a57;
+  padding-left: 12px;
+  margin-bottom: 16px;
+  color: #1b3a57;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* 文章 */
+.section p, .section ul {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* 強みリスト */
+.section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+  padding-left: 26px;
+  position: relative;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+.section ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #1b3a57;
+  font-size: 1.5rem;
+  line-height: 1;
+  top: 0;
+}
+
+/* 画像全般 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 16px 0 0 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* CLEMATISモデル画像3枚並べ */
+.clematis-models {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.clematis-models img {
+  width: 32%;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.clematis-models img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
+
+/* Instagramセクション */
+.instagram-section {
+  text-align: center;
+}
+
+.instagram-image-wrapper {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid #e1306c; /* Instagramピンク */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(225, 48, 108, 0.4);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.instagram-image-wrapper:hover {
+  box-shadow: 0 14px 40px rgba(225, 48, 108, 0.7);
+}
+
+.instagram-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* お問い合わせボタンリンク */
+.button-link {
+  display: inline-block;
+  background-color: #1b3a57;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 12px;
+}
+
+.button-link:hover {
+  background-color: #324d73;
+}
+
+/* フッター */
+.footer {
+  text-align: center;
+  padding: 16px 0;
+  border-top: 2px solid #ddd;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 700px) {
+  .clematis-models {
+    flex-direction: column;
+  }
+
+  .clematis-models img {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
